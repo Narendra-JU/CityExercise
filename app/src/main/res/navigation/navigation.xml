@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/signUpFragment">
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.cityexercise.view.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/actionGoToLoginPage"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/fragment_open_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.cityexercise.view.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/actionGoToMyCity"
+            app:destination="@id/myCity"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/myCity"
+        android:name="com.example.cityexercise.view.MyCity"
+        android:label="fragment_my_city"
+        tools:layout="@layout/fragment_my_city" >
+        <action
+            android:id="@+id/goToCompareCity"
+            app:destination="@id/compareCity"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/compareCity"
+        android:name="com.example.cityexercise.view.CompareCity"
+        android:label="fragment_compare_city"
+        tools:layout="@layout/fragment_compare_city" />
+</navigation>
