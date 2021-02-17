@@ -39,6 +39,7 @@ class CompareCity : Fragment() {
             }
             citylist.text = ""
             citylist.text = str
+            str = ""
 
 
         }
