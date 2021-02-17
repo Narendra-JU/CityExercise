@@ -21,6 +21,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
         <EditText
             android:id="@+id/etMyCItyQuery"
             android:layout_width="0dp"
@@ -44,19 +45,39 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/etMyCItyQuery" />
 
+
         <TextView
             android:id="@+id/etResponse"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
-            android:layout_marginBottom="24dp"
             android:text="Response"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etMyCItyQuery" />
+
+        <Button
+            android:id="@+id/btnMarkAsFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Mark As Favourite"
+            app:layout_constraintStart_toStartOf="@+id/etResponse"
+            app:layout_constraintTop_toBottomOf="@+id/etResponse" />
+
+        <Button
+            android:id="@+id/btnFavCities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="FAV CITIES"
+            app:layout_constraintBottom_toBottomOf="@+id/btnMarkAsFav"
+            app:layout_constraintStart_toEndOf="@+id/btnMarkAsFav"
+            app:layout_constraintTop_toTopOf="@+id/btnMarkAsFav" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
