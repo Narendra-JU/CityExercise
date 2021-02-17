@@ -37,6 +37,7 @@ class CompareCity : Fragment() {
             viewModel.list.value?.forEach {
                 str = str + it.favcity + "\n"
             }
+            citylist.text = ""
             citylist.text = str
 
 
