@@ -43,6 +43,16 @@ class CompareCity : Fragment() {
 
 
         }
+        btnDelete.setOnClickListener {
+            viewModel.deleteCity(textviewDlt.text.toString())
+            viewModel.list.value?.forEach {
+                str = str + it.favcity + "\n"
+            }
+            citylist.text = ""
+            citylist.text = str
+            str = ""
+
+        }
 
 
     }

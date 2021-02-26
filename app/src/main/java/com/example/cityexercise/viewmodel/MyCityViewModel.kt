@@ -77,7 +77,13 @@ class MyCityViewModel(application: Application):AndroidViewModel(application) {
 
     }
 
-
+    fun deleteCity(favcity: String) {
+        coroutineScope.launch {
+            favdb.deleteItemByName(favcity)
+            val fablist = favdb.getCityList()
+            list.postValue(fablist)
+        }
+    }
 
 
     private fun onError(message: String) {

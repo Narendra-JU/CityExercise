@@ -17,5 +17,8 @@ interface FavCityDao {
     @Query("SELECT * FROM FavCity")
     fun getCityList(): List<FavCity>
 
+    @Query("DELETE FROM FavCity WHERE favcity IN (:favCity)")
+    fun deleteItemByName(favCity: String)
+
 
 }
